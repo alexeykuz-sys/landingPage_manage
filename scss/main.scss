@@ -1,0 +1,7 @@
+@import 'config';
+@import 'resets';
+@import 'variables';
+
+body{
+    @include flexCenter;
+}
