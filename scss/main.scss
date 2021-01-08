@@ -1,7 +1,64 @@
 @import 'config';
 @import 'resets';
 @import 'variables';
+@import 'buttons';
 
-body{
-    @include flexCenter;
+.navbar {
+    width:100%;
+    height: fit-content;
 }
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+}
+
+
+.intro{
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+color: $DarkBlue;
+@extend %header;
+}
+
+.main-text {
+    color: $DarkGrayishBlue;
+    @extend %text;
+    margin: 21px 27px;
+    text-align: justify;
+}
+
+.slogan-text{
+    @extend %text;
+    color: $DarkBlue;
+    @include weight(bold);
+    margin: 0 0 0 15px;
+}
+.btn-primary{
+    @extend %btn;
+    background-color:$BrightRed;
+}
+
+.wrapper{
+    background-color: $VeryPaleRed;
+    margin: 20px 0 20px 10px;
+    border-top-left-radius: 16px ;
+    border-bottom-left-radius: 16px ;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+   
+    
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

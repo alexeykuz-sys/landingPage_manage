@@ -1,24 +1,30 @@
 
+$font-stack: Helvetica, sans-serif;
+$be-vietnam:'Be Vietnam';
+
 * {
     padding: 0;
     border: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
   }
   
-  html,
-  body{
-      margin: 0;
-      padding: 0;
-  }
-  
-  body {
-    overflow-x: hidden;
-    font-family: $be-vietnam, $font-stack;
-    height: 100vh;
-    width: 100vw;
-    
-  }
+  html{
+    box-sizing: border-box;
+    height: auto;
+    width: auto;
+  } 
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+  body{
+  overflow-x: hidden;
+  font-family:$be-vietnam, $font-stack;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.container-fluid{
+  width: 375px;
+  padding: 0;
+}
+
+p {
+  margin:0;
+}
