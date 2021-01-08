@@ -7,14 +7,19 @@ h1 {
   margin: 20px 0;
 }
 
-.main-text, .slogan-text {
-  line-height: 2.2rem;
+.intro-text, .slogan-text, .main-text {
+  line-height: 1.5rem;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .container-fluid {
   text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 * {
@@ -35,9 +40,8 @@ body {
   min-width: 100vw;
 }
 
-.container-fluid {
-  width: 375px;
-  padding: 0;
+p {
+  margin: 0;
 }
 
 /* Primary */
@@ -56,16 +60,16 @@ body {
 .navbar {
   width: 100%;
   height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
-.container {
-  margin: 0 auto;
-  display: flex;
-  width: 400px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
+@media only screen and (min-width: 1280px) {
+  .navbar {
+    justify-content: flex-end;
+  }
 }
 
 .intro {
@@ -77,16 +81,22 @@ h1 {
   color: #242d52;
 }
 
-.main-text {
+.intro-text {
   color: #9095a7;
   margin: 21px 27px;
   text-align: justify;
 }
 
 .slogan-text {
-  margin-left: 15px;
   color: #242d52;
   font-weight: 700;
+  margin: 0 0 0 10px;
+}
+
+.main-text {
+  color: #9095a7;
+  margin: 10px 0 30px;
+  text-align: left;
 }
 
 .btn-primary {
@@ -95,13 +105,13 @@ h1 {
 
 .wrapper {
   background-color: #ffefeb;
-  margin: 20px 0 20px 10px;
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
-  flex-direction: row;
   display: flex;
   align-items: center;
-  margin: 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .attribution {

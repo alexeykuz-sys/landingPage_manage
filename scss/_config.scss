@@ -5,6 +5,11 @@ $font-weights: (
 'bold':700
 );
 
+
+@function weight($weight-name){
+    @return map-get($font-weights, $weight-name);
+}
+
 %header {
     text-align: center;
     line-height: 3.1rem;
@@ -14,25 +19,48 @@ $font-weights: (
 }
 
 %text {
-    line-height: 2.2rem;
+    line-height: 1.5rem;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     
     
 }
 
-@function weight($weight-name){
-    @return map-get($font-weights, $weight-name);
-}
 
 @mixin flexCenter($direction, $wrap) {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: $direction;
     flex-wrap: $wrap;
+
 }
 
 .container-fluid{
     text-align: center;
+   @include flexCenter(column, wrap);
+    justify-content: center;
+}
+
+// Media Queries
+
+$tablet: 768;
+$large: 1024;
+$desktop: 1280;
+
+@mixin tablet {
+  @media only screen and (min-width: $tablet * 1px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: $large * 1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $desktop * 1px) {
+    @content;
+  }
 }

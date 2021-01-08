@@ -6,19 +6,12 @@
 .navbar {
     width:100%;
     height: fit-content;
-}
+    @include flexCenter(row, nowrap);
+    @include desktop{
+    justify-content:flex-end;
 
-.container {
-    margin: 0 auto;
-    display: flex;
-    width: 400px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    
+    }
 }
-
 
 .intro{
     width: 100%;
@@ -30,7 +23,7 @@ color: $DarkBlue;
 @extend %header;
 }
 
-.main-text {
+.intro-text {
     color: $DarkGrayishBlue;
     @extend %text;
     margin: 21px 27px;
@@ -40,9 +33,20 @@ color: $DarkBlue;
 .slogan-text{
     @extend %text;
     color: $DarkBlue;
-    @include weight(bold);
-    margin: 0 0 0 15px;
+   font-weight: weight(bold);
+    margin: 0 0 0 10px;
+    
 }
+
+
+.main-text {
+    color: $DarkGrayishBlue;
+    @extend %text;
+    margin: 10px 0 30px;
+    text-align: left;
+}
+
+
 .btn-primary{
     @extend %btn;
     background-color:$BrightRed;
@@ -50,13 +54,10 @@ color: $DarkBlue;
 
 .wrapper{
     background-color: $VeryPaleRed;
-    margin: 20px 0 20px 10px;
     border-top-left-radius: 16px ;
     border-bottom-left-radius: 16px ;
-    flex-direction: row;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
+    @include flexCenter(row,wrap);
+    width: 100%;
    
     
 }
