@@ -4,54 +4,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.svg">
   
   <title>Frontend Mentor | Manage landing page</title>
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="./images/logo.svg"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Pricing <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Careers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Community</a>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+<div class="container">
+  <div class="row" ></div>
+  <div class="col-sm-6">
+    <img src="./images/illustration-intro.svg" alt="">
+  </div>
+  <div class="col-md-6">
 
-  Pricing
-  Product
-  About Us
-  Careers
-  Community
-
-  Get Started
-
-  Bring everyone together to build better products.
-
-  Manage makes it simple for software teams to plan day-to-day 
-  tasks while keeping the larger team goals in view.
-
-  Get Started
-
-  What’s different about Manage?
-
-  Manage provides all the functionality your team needs, without 
-  the complexity. Our software is tailor-made for modern digital 
-  product teams. 
-
-  01
-  Track company-wide progress
-  See how your day-to-day tasks fit into the wider vision. Go from 
+    <h1> Bring everyone together to build better products.</h1>
+    <p>
+      Manage makes it simple for software teams to plan day-to-day 
+      tasks while keeping the larger team goals in view.
+    </p>
+    <button type="button" class="btn btn-primary">Get Started</button>
+  </div>
+<div class="row">
+  <div class="col-md-12">
+    <h1>What’s different about Manage?</h1>
+    <p>
+      Manage provides all the functionality your team needs, without 
+      the complexity. Our software is tailor-made for modern digital 
+      product teams. 
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h1><button type="button" class="btn btn-primary">01</button>  Track company-wide progress</h1>
+    <p>
+      See how your day-to-day tasks fit into the wider vision. Go from 
   tracking progress at the milestone level all the way done to the 
   smallest of details. Never lose sight of the bigger picture again.
-
-  02
-  Advanced built-in reports
-  Set internal delivery estimates and track progress toward company 
+    </p>
+  </div>
+  <div class="col-md-12">
+    <h1><button type="button" class="btn btn-primary">02</button>Advanced built-in reports</h1>
+    <p>
+      Set internal delivery estimates and track progress toward company 
   goals. Our customisable dashboard helps you build out the reports 
   you need to keep key stakeholders informed.
 
-  03
-  Everything you need in one place
+    </p>
+    <div class="col-md-12">
+      <h1><button type="button" class="btn btn-primary">03</button>Everything you need in one place</h1>
+      <p>
+       
   Stop jumping from one service to another to communicate, store files, 
   track tasks and share documents. Manage offers an all-in-one team 
   productivity solution.
 
-  What they’ve said
+  
+      </p>
+  </div>
+
+
+
+</div>
+<div class="cont">
+<div class="row">
+  <h1>What they’ve said</h1>
+</div>
+
+</div>
+
+  
 
   Anisha Li
   “Manage has supercharged our team’s workflow. The ability to maintain 
@@ -69,24 +118,57 @@
   Shanai Gough
   “Their software allows us to track, manage and collaborate on our projects 
   from anywhere. It keeps the whole team in-sync without being intrusive.”
+<div class="button">
+  <button type="button" class="btn btn-primary">Get Started</button>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Simplify how your team works today.</h1>
+      <button type="button" class="btn btn-primary">Get Started</button>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="logo"></div>
+      <div class="social-icons">
+        <div class="facebook"></div>
+        <div class="instagram"></div>
+        <div class="twitter"></div>
+        <div class="pinterest"></div>
+        <div class="something"></div>
+      </div>
+    </div>
+    <div class="col-sm-12">
+      <ul>
+        <li>Home</li>
+        <li>Pricing</li>
+        <li>Products</li>
+        <li>About Us</li>
+      </ul>
+    </div>
+    <div class="col-sm-12">
+      <ul>
+        <li>Careers</li>
+        <li>Community</li>
+        <li>Privacy Policy</li>
+      </ul>
+    </div>
+    <div class="col-sm-12">
+    <div class="update-box">
+      <input type="text" class="form-control" placeholder=" Updates in your inbox…" aria-label=" Updates in your inbox…" aria-describedby="button-addon4">
+      <div class="input-group-append" id="button-addon4">
+      <button type="button" class="btn btn-primary">Go</button>
+    </div>
+    <div class="copyright">Copyright 2020. All Rights Reserved</div>
+  </div>
+  </div>
+</div>
+  
 
-  Get Started
-
-  Simplify how your team works today.
-  Get Started
-
-  Home
-  Pricing
-  Products
-  About Us
-  Careers
-  Community
-  Privacy Policy
-
-  Updates in your inbox…
-  Go
-
-  Copyright 2020. All Rights Reserved
+  
 
   
   <div class="attribution">
