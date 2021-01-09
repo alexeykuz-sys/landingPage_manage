@@ -1,8 +1,12 @@
-%btn{
+@mixin btn($primary:false) {
     display: inline-block;
     border-radius: 30px;
     padding:10px 30px;
     font-size: $Fontsize;
     color: $VaryLightGray;
     border: 0;
+
+    @if $primary {
+        margin: 30px;
+    }
 }

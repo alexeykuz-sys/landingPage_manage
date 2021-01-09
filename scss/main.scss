@@ -48,8 +48,15 @@ color: $DarkBlue;
 
 
 .btn-primary{
-    @extend %btn;
+    @include btn($primary:true);
     background-color:$BrightRed;
+    
+}
+
+.btn-secondary{
+    @include btn($primary:false);
+    background-color:$BrightRed;
+    
 }
 
 .wrapper{
@@ -60,6 +67,14 @@ color: $DarkBlue;
     width: 100%;
    
     
+}
+
+.footer-wrapper{
+    @include large {
+        @include flexCenter(row, wrap);
+        margin-top: 40px;
+       
+    }
 }
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

@@ -48,15 +48,6 @@ p {
 /* ### Neutral */
 /* ## Typography */
 /* ### Body Copy */
-.btn-primary {
-  display: inline-block;
-  border-radius: 30px;
-  padding: 10px 30px;
-  font-size: 16px;
-  color: #fafafa;
-  border: 0;
-}
-
 .navbar {
   width: 100%;
   height: fit-content;
@@ -100,6 +91,23 @@ h1 {
 }
 
 .btn-primary {
+  display: inline-block;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 16px;
+  color: #fafafa;
+  border: 0;
+  margin: 30px;
+  background-color: #f25f3a;
+}
+
+.btn-secondary {
+  display: inline-block;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 16px;
+  color: #fafafa;
+  border: 0;
   background-color: #f25f3a;
 }
 
@@ -112,6 +120,16 @@ h1 {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
 }
 
 .attribution {
