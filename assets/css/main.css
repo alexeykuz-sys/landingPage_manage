@@ -123,18 +123,24 @@ h1 {
   background-color: #f25f3a;
   display: flex;
   justify-content: center;
-  align-items: stretch;
 }
 
 .red-patch h1 {
   background-color: #f25f3a;
   color: #fafafa;
-  margin-left: 67px;
 }
 
-.red-patch .white-btn {
-  float: right;
-  margin-right: 80px;
+@media (min-width: 1024px) {
+  .red-patch {
+    align-items: stretch;
+  }
+  .red-patch h1 {
+    margin-left: 67px;
+  }
+  .red-patch .white-btn {
+    float: right;
+    margin-right: 80px;
+  }
 }
 
 .wrapper {
@@ -185,6 +191,13 @@ h1 {
   margin-top: 20px;
 }
 
+.footer-wrapper .input-box {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
 .footer-wrapper .update-box {
   display: flex;
   align-items: center;
@@ -216,7 +229,18 @@ h1 {
     margin-top: 0;
   }
   .footer-wrapper .social-icons {
+    display: flex;
     margin: 0;
+  }
+  .footer-wrapper .input-box {
+    align-items: flex-start;
+  }
+  .footer-wrapper button {
+    margin-top: 0;
+  }
+  .footer-wrapper .copyright {
+    margin-top: 50px;
+    font-size: 12px;
   }
 }
 

@@ -65,16 +65,25 @@ color: $DarkBlue;
     background-color: $BrightRed;
     display: flex;
     justify-content: center;
-    align-items: stretch;
+    // align-items: stretch;
 
     h1{
     @include set-bg-color($BrightRed);
-    margin-left: 67px;
+    
     }
-    .white-btn{
-        float: right;
-        margin-right: 80px;
+}
+    @include large {
+        .red-patch {
+            align-items: stretch;
+        h1{
+            margin-left: 67px;
+            }
+        .white-btn{
+            float: right;
+            margin-right: 80px;
+        }
     }
+
 }
 
 .wrapper{
@@ -116,6 +125,10 @@ color: $DarkBlue;
         justify-content: space-around;
         margin-top: 20px;
     }
+    .input-box{
+        @include flexCenter(row, nowrap);
+        
+    }
     .update-box{
         @include flexCenter(row,nowrap);
         margin-left: 20px;
@@ -139,9 +152,20 @@ color: $DarkBlue;
             }
         }
         .social-icons{
+            display: flex;
             margin: 0;
         }
-        
+        .input-box {
+            align-items: flex-start;
+        }
+        button{
+            margin-top: 0;
+            
+        }
+        .copyright {
+            margin-top: 50px;
+            font-size: 12px;
+        }
     }
     
 }
