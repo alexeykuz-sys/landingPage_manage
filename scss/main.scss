@@ -13,9 +13,13 @@
     }
 }
 
+.top-text-slogan{
+    @include flexCenter(column, wrap)
+
+}
 .intro{
     width: 100%;
-    margin: 0 auto;
+    
 }
 
 h1 {
@@ -63,13 +67,14 @@ color: $DarkBlue;
 }
 .red-patch {
     background-color: $BrightRed;
-    display: flex;
-    justify-content: center;
-    // align-items: stretch;
+    @include flexCenter(column, wrap);
 
     h1{
     @include set-bg-color($BrightRed);
     
+    }
+    .white-btn{
+        align-self:center;
     }
 }
     @include large {
@@ -92,11 +97,14 @@ color: $DarkBlue;
     border-bottom-left-radius: 16px ;
     @include flexCenter(row,wrap);
     width: 100%;
-    margin-left: 10px;
-   
-    
+
 }
 
+@include large{
+    .main-text {
+        margin: 22px 0 37px 92px;
+    }
+}
 .footer-wrapper{
     @include set-bg-color($DarkBlue);
     margin: 0 auto;
@@ -131,7 +139,7 @@ color: $DarkBlue;
     }
     .update-box{
         @include flexCenter(row,nowrap);
-        margin-left: 20px;
+        margin-left: 10px;
     }
     .form-control{
         width: 220px;
@@ -140,6 +148,7 @@ color: $DarkBlue;
     @include large {
         @include flexCenter(row, wrap);
         padding: 30px;
+        justify-content: space-around;
 
         .logo-social {
             display: flex;
@@ -150,11 +159,18 @@ color: $DarkBlue;
             .logo-bottom {
                 margin-top: 0;
             }
+            svg{
+                margin: 0;
+            }
         }
         .social-icons{
             display: flex;
             margin: 0;
         }
+
+        // .update-box {
+        //     margin-left: 70px;
+        // }
         .input-box {
             align-items: flex-start;
         }

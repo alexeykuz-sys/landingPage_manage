@@ -52,12 +52,12 @@ $font-weights: (
 
 
 
-.container-fluid{
-    text-align: center;
-   @include flexCenter(column, nowrap);
-    justify-content: center;
-    padding: 0;
-}
+// .container-fluid{
+//     text-align: center;
+//    @include flexCenter(column, nowrap);
+//     // justify-content: center;
+//     padding: 0;
+// }
 
 // Media Queries
 

@@ -13,16 +13,6 @@ h1 {
   font-size: 16px;
 }
 
-.container-fluid {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  padding: 0;
-}
-
 * {
   padding: 0;
   border: 0;
@@ -64,9 +54,15 @@ p {
   }
 }
 
+.top-text-slogan {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 .intro {
   width: 100%;
-  margin: 0 auto;
 }
 
 h1 {
@@ -122,12 +118,18 @@ h1 {
 .red-patch {
   background-color: #f25f3a;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .red-patch h1 {
   background-color: #f25f3a;
   color: #fafafa;
+}
+
+.red-patch .white-btn {
+  align-self: center;
 }
 
 @media (min-width: 1024px) {
@@ -152,7 +154,12 @@ h1 {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  margin-left: 10px;
+}
+
+@media (min-width: 1024px) {
+  .main-text {
+    margin: 22px 0 37px 92px;
+  }
 }
 
 .footer-wrapper {
@@ -203,7 +210,7 @@ h1 {
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .footer-wrapper .form-control {
@@ -218,6 +225,7 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 30px;
+    justify-content: space-around;
   }
   .footer-wrapper .logo-social {
     display: flex;
@@ -227,6 +235,9 @@ h1 {
   }
   .footer-wrapper .logo-social .logo-bottom {
     margin-top: 0;
+  }
+  .footer-wrapper .logo-social svg {
+    margin: 0;
   }
   .footer-wrapper .social-icons {
     display: flex;
