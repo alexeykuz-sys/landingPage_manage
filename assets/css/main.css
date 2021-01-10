@@ -18,8 +18,9 @@ h1 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
+  padding: 0;
 }
 
 * {
@@ -57,7 +58,7 @@ p {
   flex-wrap: nowrap;
 }
 
-@media only screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
   .navbar {
     justify-content: flex-end;
   }
@@ -86,7 +87,7 @@ h1 {
 
 .main-text {
   color: #9095a7;
-  margin: 10px 0 30px;
+  margin: 10px 0 30px 10px;
   text-align: left;
 }
 
@@ -120,11 +121,20 @@ h1 {
 
 .red-patch {
   background-color: #f25f3a;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .red-patch h1 {
   background-color: #f25f3a;
   color: #fafafa;
+  margin-left: 67px;
+}
+
+.red-patch .white-btn {
+  float: right;
+  margin-right: 80px;
 }
 
 .wrapper {
@@ -136,6 +146,7 @@ h1 {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  margin-left: 10px;
 }
 
 .footer-wrapper {
@@ -144,14 +155,25 @@ h1 {
   margin: 0 auto;
 }
 
-@media only screen and (min-width: 1024px) {
-  .footer-wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 40px;
-  }
+.footer-wrapper .menu-bottom-list {
+  line-height: 2rem;
+}
+
+.footer-wrapper .logo-bottom {
+  margin-top: 15px;
+}
+
+.footer-wrapper .logo-social {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.footer-wrapper .logo-social svg {
+  margin-top: 20px;
+}
+
+.footer-wrapper .logo-social .svg-bottom-logo {
+  fill: #fafafa;
 }
 
 .footer-wrapper .social-icons {
@@ -159,19 +181,43 @@ h1 {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  margin-top: 20px;
 }
 
-.footer-wrapper .update-control {
+.footer-wrapper .update-box {
   display: flex;
   align-items: center;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  margin-left: 20px;
 }
 
 .footer-wrapper .form-control {
-  width: 200px;
+  width: 220px;
   border-radius: 40px;
+}
+
+@media (min-width: 1024px) {
+  .footer-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30px;
+  }
+  .footer-wrapper .logo-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .footer-wrapper .logo-social .logo-bottom {
+    margin-top: 0;
+  }
+  .footer-wrapper .social-icons {
+    margin: 0;
+  }
 }
 
 .attribution {

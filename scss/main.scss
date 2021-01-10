@@ -42,7 +42,7 @@ color: $DarkBlue;
 .main-text {
     color: $DarkGrayishBlue;
     @extend %text;
-    margin: 10px 0 30px;
+    margin: 10px 0 30px 10px;
     text-align: left;
 }
 
@@ -63,9 +63,18 @@ color: $DarkBlue;
 }
 .red-patch {
     background-color: $BrightRed;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
     h1{
     @include set-bg-color($BrightRed);
-}
+    margin-left: 67px;
+    }
+    .white-btn{
+        float: right;
+        margin-right: 80px;
+    }
 }
 
 .wrapper{
@@ -74,6 +83,7 @@ color: $DarkBlue;
     border-bottom-left-radius: 16px ;
     @include flexCenter(row,wrap);
     width: 100%;
+    margin-left: 10px;
    
     
 }
@@ -82,22 +92,58 @@ color: $DarkBlue;
     @include set-bg-color($DarkBlue);
     margin: 0 auto;
     
-    @include large {
-        @include flexCenter(row, wrap);
-        margin-top: 40px;
-       
+    .menu-bottom-list{
+        line-height: 2rem;
+    }
+    .logo-bottom{
+        margin-top: 15px;
+    }
+    .logo-social{
+        display: flex;
+        flex-direction: column-reverse;
+        
+        svg{
+            margin-top: 20px;
+
+        }
+
+        .svg-bottom-logo {
+            fill:$VaryLightGray;
+        }
     }
     .social-icons{
         @include flexCenter(row, wrap);
-        justify-content: space-evenly;
+        justify-content: space-around;
+        margin-top: 20px;
     }
-    .update-control{
-        @include flexCenter(row,wrap)
+    .update-box{
+        @include flexCenter(row,nowrap);
+        margin-left: 20px;
     }
     .form-control{
-        width: 200px;
+        width: 220px;
         border-radius: 40px;
     }
+    @include large {
+        @include flexCenter(row, wrap);
+        padding: 30px;
+
+        .logo-social {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0;
+
+            .logo-bottom {
+                margin-top: 0;
+            }
+        }
+        .social-icons{
+            margin: 0;
+        }
+        
+    }
+    
 }
 
 .attribution { font-size: 11px; text-align: center; }

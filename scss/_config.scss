@@ -54,8 +54,9 @@ $font-weights: (
 
 .container-fluid{
     text-align: center;
-   @include flexCenter(column, wrap);
+   @include flexCenter(column, nowrap);
     justify-content: center;
+    padding: 0;
 }
 
 // Media Queries
@@ -65,19 +66,19 @@ $large: 1024;
 $desktop: 1280;
 
 @mixin tablet {
-  @media only screen and (min-width: $tablet * 1px) {
+  @media (min-width: $tablet * 1px) {
     @content;
   }
 }
 
 @mixin large {
-  @media only screen and (min-width: $large * 1px) {
+  @media (min-width: $large * 1px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media only screen and (min-width: $desktop * 1px) {
+  @media (min-width: $desktop * 1px) {
     @content;
   }
 }
