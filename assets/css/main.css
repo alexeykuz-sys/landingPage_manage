@@ -7,7 +7,7 @@ h1 {
   margin: 20px 0;
 }
 
-.intro-text, .slogan-text, .main-text {
+.intro-text, .slogan-text, .main-text, .card, .card .card-title {
   line-height: 1.5rem;
   font-weight: 400;
   font-size: 16px;
@@ -48,9 +48,9 @@ p {
   flex-wrap: nowrap;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   .navbar {
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 }
 
@@ -115,6 +115,26 @@ h1 {
   color: #f25f3a;
 }
 
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  color: #9095a7;
+  background-color: #fafafa;
+  margin-top: 80px;
+}
+
+.card img {
+  width: 80px;
+  margin-top: -40px;
+}
+
+.card .card-title {
+  top: 40px;
+  margin: 10px auto;
+}
+
 .red-patch {
   background-color: #f25f3a;
   display: flex;
@@ -171,11 +191,28 @@ h1 {
 }
 
 .footer-wrapper .menu-bottom-list {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+.footer-wrapper .footer-menu-wrapper-left {
   line-height: 2rem;
+  float: left;
+  margin-left: 10px;
+}
+
+.footer-wrapper .footer-menu-wrapper-right {
+  line-height: 2rem;
+  align-self: baseline;
+  float: right;
+  margin-left: 10px;
 }
 
 .footer-wrapper .logo-bottom {
-  margin-top: 15px;
+  margin: 15px auto;
 }
 
 .footer-wrapper .logo-social {
@@ -196,8 +233,8 @@ h1 {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 20px;
+  justify-content: space-evenly;
+  margin: 20px;
 }
 
 .footer-wrapper .input-box {
@@ -205,6 +242,8 @@ h1 {
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
+  padding: 5px;
+  justify-content: flex-end;
 }
 
 .footer-wrapper .update-box {
@@ -212,7 +251,6 @@ h1 {
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin-left: 10px;
 }
 
 .footer-wrapper .form-control {
@@ -226,7 +264,10 @@ h1 {
   }
   .footer-wrapper .logo-social {
     display: flex;
+    align-items: center;
     flex-direction: column;
+    flex-wrap: wrap;
+    align-items: inherit;
     justify-content: space-between;
     margin: 0 0 0 47px;
   }
@@ -240,8 +281,27 @@ h1 {
     display: flex;
     margin: 0;
   }
+  .footer-wrapper .menu-bottom-list {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .footer-wrapper .footer-menu-wrapper-left {
+    line-height: 2rem;
+    float: left;
+    margin-left: 30px;
+  }
+  .footer-wrapper .footer-menu-wrapper-right {
+    line-height: 2rem;
+    align-self: baseline;
+    float: right;
+    margin-left: 30px;
+  }
   .footer-wrapper .input-box {
     align-items: flex-start;
+    margin-left: 120px;
   }
   .footer-wrapper button {
     margin-top: 0;

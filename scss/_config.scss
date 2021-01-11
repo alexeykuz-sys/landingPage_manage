@@ -50,7 +50,15 @@ $font-weights: (
 
 }
 
+@mixin element-align($align,$margin) {
+    align-items: $align;
+    margin: $margin;
+}
 
+@mixin  element-float($float, $margin) {
+    float:$float;
+    margin-left: $margin;    
+}
 
 // .container-fluid{
 //     text-align: center;

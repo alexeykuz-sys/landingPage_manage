@@ -7,8 +7,8 @@
     width:100%;
     height: fit-content;
     @include flexCenter(row, nowrap);
-    @include desktop{
-    justify-content:flex-end;
+    @include large{
+    justify-content: space-between;
 
     }
 }
@@ -65,6 +65,24 @@ color: $DarkBlue;
 .white-btn{
     @include set-bg-color($VaryLightGray);
 }
+
+.card {
+    @include flexCenter (column, nowrap);
+   color: $DarkGrayishBlue;
+   background-color: $VaryLightGray;
+    @extend %text;
+    margin-top: 80px;
+    img {
+        width:80px;
+       margin-top: -40px;
+    }
+    .card-title{
+        @extend %text;
+        top:40px;
+        margin: 10px auto;
+    }
+}
+
 .red-patch {
     background-color: $BrightRed;
     @include flexCenter(column, wrap);
@@ -113,12 +131,22 @@ color: $DarkBlue;
     @include set-bg-color($DarkBlue);
     justify-content: space-around;
 
-    
     .menu-bottom-list{
-        line-height: 2rem;
+        @include flexCenter(row,nowrap);
+        justify-content: space-evenly;
     }
+    .footer-menu-wrapper-left{
+        line-height: 2rem;
+        @include element-float(left,10px);
+    }
+    .footer-menu-wrapper-right{
+        line-height: 2rem;
+        align-self: baseline;
+        @include element-float(right,10px);
+    }
+
     .logo-bottom{
-        margin-top: 15px;
+        margin: 15px auto;
     }
     .logo-social{
         display: flex;
@@ -135,16 +163,19 @@ color: $DarkBlue;
     }
     .social-icons{
         @include flexCenter(row, wrap);
-        justify-content: space-around;
-        margin-top: 20px;
+        justify-content: space-evenly;
+        margin: 20px;
     }
     .input-box{
         @include flexCenter(row, nowrap);
+        padding: 5px;
+        justify-content: flex-end;
+        
         
     }
     .update-box{
         @include flexCenter(row,nowrap);
-        margin-left: 10px;
+        
     }
     .form-control{
         width: 220px;
@@ -156,8 +187,8 @@ color: $DarkBlue;
         
 
         .logo-social {
-            display: flex;
-            flex-direction: column;
+            @include flexCenter(column, wrap);
+            align-items: inherit;
             justify-content: space-between;
             margin: 0 0 0 47px;
 
@@ -172,12 +203,23 @@ color: $DarkBlue;
             display: flex;
             margin: 0;
         }
+        .menu-bottom-list{
+            @include flexCenter(row,nowrap);
+            justify-content:space-between;
+        }
+        .footer-menu-wrapper-left{
+            line-height: 2rem;
+            @include element-float(left,30px);
+        }
+        .footer-menu-wrapper-right{
+            line-height: 2rem;
+            align-self: baseline;
+            @include element-float(right,30px);
+        }
 
-        // .update-box {
-        //     margin-left: 70px;
-        // }
         .input-box {
             align-items: flex-start;
+            margin-left: 120px;
         }
         button{
             margin-top: 0;
