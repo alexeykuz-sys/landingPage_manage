@@ -8,9 +8,17 @@
     height: fit-content;
     @include flexCenter(row, nowrap);
     @include large{
-    justify-content: space-between;
-
+    
+    &-brand{
+        margin-left: 60px;
     }
+    &-collapse {
+        justify-content: space-around;
+    }
+    &-btn{
+        margin-right: 20px;
+    }
+}
 }
 
 .top-text-slogan{
@@ -25,6 +33,7 @@
 h1 {
 color: $DarkBlue;
 @extend %header;
+
 }
 
 .intro-text {
