@@ -138,10 +138,12 @@ h1 {
   }
   .red-patch h1 {
     margin-left: 67px;
+    text-align: left;
   }
   .red-patch .white-btn {
     float: right;
     margin-right: 80px;
+    align-self: center;
   }
 }
 
@@ -165,7 +167,7 @@ h1 {
 .footer-wrapper {
   background-color: #242d52;
   color: #fafafa;
-  margin: 0 auto;
+  justify-content: space-around;
 }
 
 .footer-wrapper .menu-bottom-list {
@@ -220,18 +222,13 @@ h1 {
 
 @media (min-width: 1024px) {
   .footer-wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
     padding: 30px;
-    justify-content: space-around;
   }
   .footer-wrapper .logo-social {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0;
+    margin: 0 0 0 47px;
   }
   .footer-wrapper .logo-social .logo-bottom {
     margin-top: 0;

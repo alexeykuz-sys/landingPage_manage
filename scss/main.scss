@@ -82,10 +82,12 @@ color: $DarkBlue;
             align-items: stretch;
         h1{
             margin-left: 67px;
+            text-align: left;
             }
         .white-btn{
             float: right;
             margin-right: 80px;
+            align-self: center;
         }
     }
 
@@ -105,9 +107,12 @@ color: $DarkBlue;
         margin: 22px 0 37px 92px;
     }
 }
+
+
 .footer-wrapper{
     @include set-bg-color($DarkBlue);
-    margin: 0 auto;
+    justify-content: space-around;
+
     
     .menu-bottom-list{
         line-height: 2rem;
@@ -146,15 +151,15 @@ color: $DarkBlue;
         border-radius: 40px;
     }
     @include large {
-        @include flexCenter(row, wrap);
+        
         padding: 30px;
-        justify-content: space-around;
+        
 
         .logo-social {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            margin: 0;
+            margin: 0 0 0 47px;
 
             .logo-bottom {
                 margin-top: 0;
