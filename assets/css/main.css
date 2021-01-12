@@ -6,7 +6,7 @@ h1 {
   font-size: 35px;
 }
 
-.intro-text, .slogan-text, .main-text, .card, .card .card-title {
+.modal-nav.show .modal-body .navbar-nav a.nav-link, .intro-section .intro-text, .slogan-text, .main-text, .card, .card .card-title {
   line-height: 1.5rem;
   font-weight: 400;
   font-size: 16px;
@@ -47,16 +47,68 @@ p {
   flex-wrap: nowrap;
 }
 
+.navbar #navbar-btn {
+  display: none;
+}
+
+.navbar-hamburger.show {
+  display: block;
+}
+
+.navbar-hamburger {
+  display: none;
+}
+
+.navbar-hamburger.show {
+  display: block;
+}
+
+.navbar-icon-close {
+  display: none;
+}
+
+.navbar-icon-close.show {
+  display: block;
+}
+
 @media (min-width: 1024px) {
-  .navbar-brand {
-    margin-left: 60px;
-  }
   .navbar-collapse {
     justify-content: space-around;
+    text-align: center;
   }
-  .navbar-btn {
-    margin-right: 20px;
+  .navbar #navbar-btn {
+    display: block;
   }
+}
+
+.modal-nav {
+  display: none;
+}
+
+.modal-nav.show {
+  width: 330px;
+  height: 280px;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  box-shadow: 69px 72px 125px #9095a7;
+  background-color: white;
+}
+
+.modal-nav.show .modal-body {
+  margin-top: 20px;
+}
+
+.modal-nav.show .modal-body .navbar-nav a.nav-link {
+  color: #242d52;
+  font-weight: 900;
+  font-size: 20px;
 }
 
 .top-text-slogan {
@@ -66,18 +118,39 @@ p {
   flex-wrap: wrap;
 }
 
+@media (min-width: 1024px) {
+  .top-text-slogan h1 {
+    text-align: start;
+  }
+  .top-text-slogan .intro-text {
+    text-align: start;
+    margin: 27px 0;
+  }
+}
+
 .intro {
   width: 100%;
 }
 
 h1 {
   color: #242d52;
+  align-items: start;
 }
 
-.intro-text {
+.intro-section .intro-text {
   color: #9095a7;
   margin: 21px 27px;
   text-align: justify;
+}
+
+@media (min-width: 1024px) {
+  .intro-section h1 {
+    text-align: start;
+  }
+  .intro-section .intro-text {
+    text-align: start;
+    margin: 27px 0;
+  }
 }
 
 .slogan-text {
@@ -162,12 +235,10 @@ h1 {
     align-items: stretch;
   }
   .red-patch h1 {
-    margin-left: 67px;
     text-align: left;
   }
   .red-patch .white-btn {
     float: right;
-    margin-right: 80px;
     align-self: center;
   }
 }
@@ -274,7 +345,6 @@ h1 {
     flex-wrap: wrap;
     align-items: inherit;
     justify-content: space-between;
-    margin: 0 0 0 47px;
   }
   .footer-wrapper .logo-social .logo-bottom {
     margin-top: 0;
@@ -292,6 +362,7 @@ h1 {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    margin-left: 70px;
   }
   .footer-wrapper .footer-menu-wrapper-left {
     line-height: 2rem;
@@ -306,7 +377,7 @@ h1 {
   }
   .footer-wrapper .input-box {
     align-items: flex-start;
-    margin-left: 120px;
+    margin-left: 106px;
   }
   .footer-wrapper button {
     margin-top: 0;

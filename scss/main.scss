@@ -7,22 +7,87 @@
     width:100%;
     height: fit-content;
     @include flexCenter(row, nowrap);
+#navbar-btn{
+    display: none;
+}
+&-hamburger.show{
+    display: block;
+    
+}
+
+&-hamburger{
+    display: none;
+
+}
+
+&-hamburger.show{
+    display: block;
+
+}
+
+&-icon-close{
+    display: none;
+}
+&-icon-close.show{
+    display: block  ;
+}
+
     @include large{
     
-    &-brand{
-        margin-left: 60px;
-    }
+    
     &-collapse {
         justify-content: space-around;
+        text-align: center;
+    
     }
-    &-btn{
-        margin-right: 20px;
+
+    #navbar-btn{
+        display: block;
     }
+    
 }
 }
 
+.modal-nav{
+    display: none;
+}
+.modal-nav.show{
+    width: 330px;
+    height: 280px;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    position: absolute;
+    @include flexCenter(column,nowrap);
+    box-shadow: 69px 72px 125px $DarkGrayishBlue;
+    background-color: white;
+
+    .modal-body{
+        margin-top: 20px;
+    }
+    .modal-body .navbar-nav a.nav-link{
+        color: $DarkBlue;
+        @extend %text;
+        font-weight: 900;
+        font-size: 20px;
+    }
+        
+    
+}
+
+
 .top-text-slogan{
-    @include flexCenter(column, wrap)
+    @include flexCenter(column, wrap);
+    @include large{
+        h1{
+        text-align: start;
+        }
+        .intro-text {
+            text-align: start;
+            margin: 27px 0;
+        }
+}
 
 }
 .intro{
@@ -33,8 +98,11 @@
 h1 {
 color: $DarkBlue;
 @extend %header;
+align-items: start;
 
 }
+
+.intro-section{
 
 .intro-text {
     color: $DarkGrayishBlue;
@@ -43,6 +111,17 @@ color: $DarkBlue;
     text-align: justify;
 }
 
+@include large{
+    h1{
+    text-align: start;
+    }
+    .intro-text {
+        text-align: start;
+        margin: 27px 0;
+    }
+}
+
+}
 .slogan-text{
     @extend %text;
     color: $DarkBlue;
@@ -76,6 +155,7 @@ color: $DarkBlue;
 }
 
 .card {
+   
     @include flexCenter (column, nowrap);
    color: $DarkGrayishBlue;
    background-color: $VaryLightGray;
@@ -108,12 +188,11 @@ color: $DarkBlue;
         .red-patch {
             align-items: stretch;
         h1{
-            margin-left: 67px;
+           
             text-align: left;
             }
         .white-btn{
             float: right;
-            margin-right: 80px;
             align-self: center;
         }
     }
@@ -199,7 +278,7 @@ color: $DarkBlue;
             @include flexCenter(column, wrap);
             align-items: inherit;
             justify-content: space-between;
-            margin: 0 0 0 47px;
+           
 
             .logo-bottom {
                 margin-top: 0;
@@ -215,6 +294,7 @@ color: $DarkBlue;
         .menu-bottom-list{
             @include flexCenter(row,nowrap);
             justify-content:space-between;
+            margin-left: 70px;
         }
         .footer-menu-wrapper-left{
             line-height: 2rem;
@@ -228,7 +308,7 @@ color: $DarkBlue;
 
         .input-box {
             align-items: flex-start;
-            margin-left: 120px;
+            margin-left: 106px;
         }
         button{
             margin-top: 0;
