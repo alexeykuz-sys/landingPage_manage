@@ -27,33 +27,23 @@ function navCrossHandler (){
 }
 
 navClose.addEventListener('click', navCrossHandler);
-let x = document.getElementById('carouselExample')
 
-$('#carouselExample').on('slide.bs.carousel', function (e) {
+const buttonsWrapper = document.querySelector('.map');
+const slides = document.querySelector('.inner');
 
-    console.log('ddfg', $(e.relatedTarget.index))
-})
+buttonsWrapper.addEventListener('click', e => {
+   if(e.target.nodeName === 'BUTTON'){
+    Array.from(buttonsWrapper.children).forEach(item => item.classList.remove('active'));
+    if(e.target.classList.contains('first')){
+        slides.style.transform = 'translateX(-0%)';
+        e.target.classList.add('active');
+    } else if (e.target.classList.contains('second')){
+        slides.style.transform = 'translateX(-33.333333333%)';
+        e.target.classList.add('active');
+    } else if (e.target.classList.contains('third')){
+        slides.style.transform = 'translateX(0%)';
+        e.target.classList.add('active');
+    }
+}
+});
 
-
-//     var $e = $(e.relatedTarget);
-//     console.log($e)
-//     var idx = $e.index();
-//     console.log("IDX :  " + idx);
-    
-//     var itemsPerSlide = 3;
-//     var totalItems = $('.carousel-item').length;
-//     console.log(totalItems)
-//     if (idx >= totalItems-(itemsPerSlide-1)) {
-//         var it = itemsPerSlide - (totalItems - idx);
-//         console.log(it)
-//         for (var i=0; i<it; i++) {
-//             // append slides to end
-//             if (e.direction=="left") {
-//                 $('.carousel-item').eq(i).appendTo('.carousel-inner');
-//             }
-//             else {
-//                 $('.carousel-item').eq(0).appendTo('.carousel-inner');
-//             }
-//         }
-//     }
-// });

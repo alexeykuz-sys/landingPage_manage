@@ -154,13 +154,22 @@ align-items: start;
     @include set-bg-color($VaryLightGray);
 }
 
+.card-wrapper {
+    @include flexCenter(column, nowrap);
+    overflow: hidden;
+
+    .inner{
+        display: flex;
+        transition: all 1s ease-in-out;
+    }
+}
 .card {
-   
     @include flexCenter (column, nowrap);
    color: $DarkGrayishBlue;
    background-color: $VaryLightGray;
     @extend %text;
     margin-top: 80px;
+    height: 250px;
     img {
         width:80px;
        margin-top: -40px;
@@ -169,6 +178,44 @@ align-items: start;
         @extend %text;
         top:40px;
         margin: 10px auto;
+    }
+
+    @include large{
+        .card-wrapper{
+            @include flexCenter(column,wrap);
+            overflow: hidden;
+        
+            .inner{
+                display: flex;
+                transition: all 1s ease-in-out;
+            }
+        }
+    }
+
+}
+
+.map {
+    margin-top: 1em;
+    &>button {
+        all: unset;
+        background: lighten($color:$BrightRed, $amount: 10);
+        cursor: pointer;
+        margin: 0 0.125em;
+        position: relative;
+        user-select: none;
+        @include circle(1em);
+
+        &.active{
+            &::after {
+                background: $BrightRed;
+                content: '';
+                left: 50%;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                top:50%;
+                @include circle(1em);
+            }
+        }
     }
 }
 
