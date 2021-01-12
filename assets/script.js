@@ -27,28 +27,33 @@ function navCrossHandler (){
 }
 
 navClose.addEventListener('click', navCrossHandler);
+let x = document.getElementById('carouselExample')
 
-// jQuery(document).ready(function($) {
-//     "use strict";
-// $('#carouselExampleIndicators').on('slide.bs.carousel', function () {
-//         loop: true,
-//         center: true,
-//         items: 3,
-//         margin: 0,
-//         autoplay: true,
-//         dots:true,
-//         autoplayTimeout: 8500,
-//         smartSpeed: 450,
-//         responsive: {
-//           0: {
-//             items: 1
-//           },
-//           768: {
-//             items: 2
-//           },
-//           1170: {
-//             items: 3
-//           }
+$('#carouselExample').on('slide.bs.carousel', function (e) {
 
-//  })
-// })
+    console.log('ddfg', $(e.relatedTarget.index))
+})
+
+
+//     var $e = $(e.relatedTarget);
+//     console.log($e)
+//     var idx = $e.index();
+//     console.log("IDX :  " + idx);
+    
+//     var itemsPerSlide = 3;
+//     var totalItems = $('.carousel-item').length;
+//     console.log(totalItems)
+//     if (idx >= totalItems-(itemsPerSlide-1)) {
+//         var it = itemsPerSlide - (totalItems - idx);
+//         console.log(it)
+//         for (var i=0; i<it; i++) {
+//             // append slides to end
+//             if (e.direction=="left") {
+//                 $('.carousel-item').eq(i).appendTo('.carousel-inner');
+//             }
+//             else {
+//                 $('.carousel-item').eq(0).appendTo('.carousel-inner');
+//             }
+//         }
+//     }
+// });
