@@ -18,6 +18,26 @@ $be-vietnam:'Be Vietnam';
   font-family:$be-vietnam, $font-stack;
   min-height: 100vh;
   min-width: 100vw;
+  background-image: url('/images/bg-tablet-pattern.svg');
+  background-repeat:no-repeat;
+  background-position-x: 70px;
+  background-position-y: -150px;
+  background-size: 110%;
+    @include tablet{
+      background-image: url('/images/bg-tablet-pattern.svg');
+      
+      background-repeat:no-repeat;
+      background-position-x: 386px;
+      background-position-y: -227px;
+      background-size: 57%;
+      }
+      @include large{
+        background-image: url('/images/bg-tablet-pattern.svg');   
+        background-repeat:no-repeat;
+        background-position-x: 786px;
+        background-position-y: -327px;
+        background-size: 50%;
+        }
 }
 
 

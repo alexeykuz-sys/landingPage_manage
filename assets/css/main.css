@@ -28,6 +28,31 @@ body {
   font-family: "Be Vietnam", Helvetica, sans-serif;
   min-height: 100vh;
   min-width: 100vw;
+  background-image: url("/images/bg-tablet-pattern.svg");
+  background-repeat: no-repeat;
+  background-position-x: 70px;
+  background-position-y: -150px;
+  background-size: 110%;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url("/images/bg-tablet-pattern.svg");
+    background-repeat: no-repeat;
+    background-position-x: 386px;
+    background-position-y: -227px;
+    background-size: 57%;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-image: url("/images/bg-tablet-pattern.svg");
+    background-repeat: no-repeat;
+    background-position-x: 786px;
+    background-position-y: -327px;
+    background-size: 50%;
+  }
 }
 
 p {
@@ -197,8 +222,9 @@ h1 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   overflow: hidden;
+  border: 2px solid rebeccapurple;
 }
 
 .card-wrapper .inner {
@@ -328,6 +354,7 @@ h1 {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
+  margin: 0 auto;
 }
 
 .footer-wrapper .footer-menu-wrapper-left {
@@ -390,6 +417,61 @@ h1 {
   border-radius: 40px;
 }
 
+@media (min-width: 768px) {
+  .footer-wrapper {
+    padding: 30px;
+  }
+  .footer-wrapper .logo-social {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: inherit;
+    justify-content: space-between;
+  }
+  .footer-wrapper .logo-social .logo-bottom {
+    margin-top: 0;
+  }
+  .footer-wrapper .logo-social svg {
+    margin: 0;
+  }
+  .footer-wrapper .social-icons {
+    display: flex;
+    margin: 0;
+  }
+  .footer-wrapper .menu-bottom-list {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-left: 70px;
+  }
+  .footer-wrapper .footer-menu-wrapper-left {
+    line-height: 2rem;
+    float: left;
+    margin-left: 30px;
+  }
+  .footer-wrapper .footer-menu-wrapper-right {
+    line-height: 2rem;
+    align-self: baseline;
+    float: right;
+    margin-left: 30px;
+  }
+  .footer-wrapper .input-box {
+    align-items: center;
+    margin-left: 46px;
+    flex-direction: column;
+  }
+  .footer-wrapper button {
+    margin-top: 40px;
+  }
+  .footer-wrapper .copyright {
+    margin-top: 50px;
+    font-size: 12px;
+  }
+}
+
 @media (min-width: 1024px) {
   .footer-wrapper {
     padding: 30px;
@@ -433,7 +515,9 @@ h1 {
   }
   .footer-wrapper .input-box {
     align-items: flex-start;
-    margin-left: 106px;
+    margin-left: 76px;
+    display: flex;
+    flex-direction: row;
   }
   .footer-wrapper button {
     margin-top: 0;

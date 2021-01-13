@@ -34,13 +34,24 @@ const slides = document.querySelector('.inner');
 buttonsWrapper.addEventListener('click', e => {
    if(e.target.nodeName === 'BUTTON'){
     Array.from(buttonsWrapper.children).forEach(item => item.classList.remove('active'));
-    if(e.target.classList.contains('first')){
-        slides.style.transform = 'translateX(-0%)';
+    if(e.target.classList.contains('first') && window.innerWidth>375){
+        slides.style.transform = 'translateX(0%)';
         e.target.classList.add('active');
     } else if (e.target.classList.contains('second')){
         slides.style.transform = 'translateX(-33.333333333%)';
         e.target.classList.add('active');
     } else if (e.target.classList.contains('third')){
+        slides.style.transform = 'translateX(0%)';
+        e.target.classList.add('active');
+    } else if(e.target.classList.contains('first') && window.innerWidth<=375){
+        console.log('dfdf')
+        slides.style.transform = 'translateX(-100%)';
+        e.target.classList.add('active');
+    } else if (e.target.classList.contains('second') && window.innerWidth<=375){
+        slides.style.transform = 'translateX(-48%)';
+        console.log('gfgf')
+        e.target.classList.add('active');
+    } else if (e.target.classList.contains('third') && window.innerWidth<=375){
         slides.style.transform = 'translateX(0%)';
         e.target.classList.add('active');
     }
