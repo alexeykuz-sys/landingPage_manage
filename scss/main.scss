@@ -33,7 +33,14 @@
 }
 
     @include large{
-    
+    & .navbar-collapse .nav-item a {
+        color:$DarkBlue;
+        font-weight:600;
+        
+    }
+    & .navbar-collapse .nav-item a:hover {
+        text-transform: uppercase;
+    }
     
     &-collapse {
         justify-content: space-around;
@@ -47,6 +54,7 @@
     
 }
 }
+
 
 .modal-nav{
     display: none;
@@ -72,14 +80,17 @@
         font-weight: 900;
         font-size: 20px;
     }
-        
-    
+    .modal-body .navbar-nav a.nav-link:hover{
+        text-transform: uppercase;
+    }
 }
 
 
 .top-text-slogan{
     @include flexCenter(column, wrap);
+    margin-top: 40px;
     @include large{
+        margin-top: 0;
         h1{
         text-align: start;
         }
@@ -92,6 +103,7 @@
 }
 .intro{
     width: 100%;
+    @include boxShadow(rgb(236, 225, 225));
     
 }
 
@@ -103,6 +115,7 @@ align-items: start;
 }
 
 .intro-section{
+    margin-top: 40px;
 
 .intro-text {
     color: $DarkGrayishBlue;
@@ -140,14 +153,44 @@ align-items: start;
 }
 
 
-.btn-primary{
+.btn-primary1{
     @include btn($primary:true);
-    
+    @include boxShadow(rgba(155, 152, 152, 0.281));
+   
+&:active {
+        @include buttonAction($DarkGrayishBlue, $BrightRed);
+
+}
+}
+
+
+.btn-primary2{
+    @include btn($primary:true);
+    @include boxShadow(rgba(155, 152, 152, 0.281));
+   
+&:active {
+        @include buttonAction($DarkGrayishBlue, $VaryLightGray);
+
+}
+}
+
+
+.btn-primary3{
+    @include btn($primary:true);
+    @include boxShadow(rgba(17, 81, 153, 0.281));
+   
+&:active {
+        @include buttonAction($DarkBlue, $VeryPaleRed);
+
+}
 }
 
 .btn-secondary{
     @include btn($primary:false);
    
+    &:hover{
+        @include btn($primary:false);
+    }
     
 }
 
@@ -248,12 +291,13 @@ align-items: start;
 
 }
 
-.wrapper{
+.wrapper{   
     background-color: $VeryPaleRed;
     border-top-left-radius: 16px ;
     border-bottom-left-radius: 16px ;
     @include flexCenter(row,nowrap);
     width: 100%;
+    margin-top: 40px;
 
 }
 
@@ -431,4 +475,6 @@ align-items: start;
 }
 
 .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}

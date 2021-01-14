@@ -12,3 +12,18 @@
         
     }
 }
+
+
+@mixin boxShadow ($color){
+    box-shadow: -2px -2px 15px $color,
+      2px 2px 15px $color;
+    outline: none;
+  }
+
+  @mixin buttonAction ($colorShadow, $colorInset) {
+    box-shadow: -3px -3px 10px $colorShadow,
+    5px 5px 10px $colorShadow,
+    inset -2px -2px 5px $colorInset,
+    inset 2px 2px 5px $colorInset;
+    outline: none;
+  }
