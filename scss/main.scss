@@ -62,11 +62,7 @@
 .modal-nav.show{
     width: 330px;
     height: 280px;
-    top: 28%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
-    position: absolute;
+    @include modalCenter(28%, 50%);
     @include flexCenter(column,nowrap);
     box-shadow: 69px 72px 125px $DarkGrayishBlue;
     background-color: white;
@@ -180,7 +176,7 @@ align-items: start;
     @include boxShadow(rgba(17, 81, 153, 0.281));
    
 &:active {
-        @include buttonAction($DarkBlue, $VeryPaleRed);
+    @include buttonAction($DarkBlue, $VeryPaleRed);
 
 }
 }
